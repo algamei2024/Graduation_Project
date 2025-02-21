@@ -1,0 +1,108 @@
+/* From Uiverse.io by mrhyddenn */
+.card-struct{
+    padding:10px;
+}
+.structure {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 62px;
+    flex-wrap: wrap;
+}
+
+.card-type {
+    width: 250px;
+    height: 230px;
+    background: #ffff;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 12px 10px;
+    border-radius: 4px;
+}
+
+.card_load_extreme_title {
+    width: 220px;
+    height: 20px;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.card_load_extreme_descripion {
+    width: 220px;
+    height: 150px;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    margin: 10px 0;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+.grid-one {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+}
+
+.grid-three {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 5px;
+}
+
+.card_load_extreme_descripion-one {
+    height: 150px;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+    margin: 10px 0;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: load89234 2s infinite;
+}
+
+@keyframes load89234 {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* ///// */
+
+.one_k{
+  height: 290px;
+  width: 250px;
+  overflow: hidden;
+  position: relative;
+border: 1px solid darkblue;
+border-radius: 5px;
+}
+.one_k img {
+
+top: 0px;
+position: absolute;
+width: auto;
+
+animation-duration: 1.5s;
+}
+ img:hover{
+  animation-name: example;
+
+}
+
+@keyframes example {
+  from {top:0px;}
+  to {top:-100px;}
+}
+.cont{
+  position: absolute;
+  text-align: center;
+    background-color: red;
+    top: 10px;
+    left: -6px;
+    border-radius: 0px -14px;
+    width: 90px;
+    color: aliceblue;
+    z-index: 3000;
+    transform: rotate(-23deg);
+}

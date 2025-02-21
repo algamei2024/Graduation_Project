@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+
+list-style: none;
+user-select: none; 
+-webkit-user-select: none; /* Safari */
+-moz-user-select: none; 
+-ms-user-select: none;
+
+}

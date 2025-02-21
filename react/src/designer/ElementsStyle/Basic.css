@@ -1,0 +1,323 @@
+.PB-range-slider {
+    -webkit-appearance: none ;
+    width: 100% ;
+    height: 4px;
+    border-radius: 5px;
+    background: #D5DBE1;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+
+}
+button svg path ,button svg{
+  pointer-events: none;
+}
+.PB-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.16);
+    transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+    cursor: pointer;
+    
+}
+
+.PB-range-slider-div {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #C6CACE;
+    box-shadow: 0px 1px 2px 0px #1F1E241F;
+    margin-bottom: 8px;
+}
+
+.PB-range-slidervalue {
+    font-weight: 600;
+}
+/* From Uiverse.io by asgardOP */
+.flex-col button{
+border: 0px !important;
+}
+
+.ul li {
+  cursor: pointer;
+  box-sizing: border-box ;
+}
+
+.radio {
+    display: none !important;
+}
+
+.svg {
+    width: 100%;
+    height: 30px;
+   margin-left: 1rem;
+   font-size: xx-large;
+    cursor: pointer;
+    text-align: center;
+  
+    transition: 0.2s;
+    color:rgb(6, 6, 6);
+}
+
+.ul li label .svg:hover {
+    transition: 0.1s;
+    color: rgb(235, 40, 176);
+    position: relative;
+    top: -5px;
+    opacity: 100%;
+    
+  
+}
+
+.radio:checked + label .li .svg {
+   border-width:1px ;
+   border-radius: 10px;
+  
+    border-color:green ;
+    fill-rule: evenodd;
+}
+/*
+---------this for check scale
+*/
+.checkbox {
+    appearance: none;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 2px solid black;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  
+}
+
+.checkbox::before {
+    font-family: "Quicksand", sans-serif;
+    position: absolute;
+    bottom: -4px;
+    left: 1px;
+    content: "✔";
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked::before {
+    animation: zoom 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1.5);
+    }
+
+    40% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    90% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+/*for background color input*/
+.body {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#swatch {
+    background: white;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#swatch .info {
+    padding: 1em;
+}
+
+#swatch h1 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#swatch h2 {
+    font-weight: normal;
+    margin: 0;
+}
+
+
+*:focus {
+    border-radius: 0;
+    outline: none;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-webkit-color-swatch {
+    border: 0;
+    border-radius: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+    border: 0;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+}
+/*this is for battery input range for border*/
+/* level settings 👇 */
+
+.slider {
+    /* slider */
+    --slider-width: 100%;
+    --slider-height: 50px;
+    --slider-bg: rgb(82, 82, 82);
+    --slider-border-radius: 9px;
+    /* level */
+    --level-color: #fff;
+    --level-transition-duration: 0.1s;
+    /* icon */
+    --icon-margin: 15px;
+    --icon-color: var(--slider-bg);
+    --icon-size: 25px;
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.slider .volume {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: var(--icon-margin);
+    color: var(--icon-color);
+    width: var(--icon-size);
+    height: auto;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+}
+
+.slider .level {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--slider-width);
+    height: var(--slider-height);
+    background: var(--slider-bg);
+    overflow: hidden;
+    border-radius: var(--slider-border-radius);
+    -webkit-transition: height var(--level-transition-duration);
+    -o-transition: height var(--level-transition-duration);
+    transition: height var(--level-transition-duration);
+    cursor: inherit;
+    transform: rotate(270deg);
+}
+
+.slider .level::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    -webkit-box-shadow: -200px 0 0 200px var(--level-color);
+    box-shadow: -200px 0 0 200px var(--level-color);
+}
+
+.slider .level::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: -200px 0 0 200px var(--level-color);
+}
+input{
+  border: 1px solid black;
+}
+.lexical h1 {
+  @apply block font-sans text-4xl font-semibold leading-[1.3] tracking-normal text-inherit antialiased;
+}
+ 
+.lexical h2 {
+  @apply block font-sans text-3xl font-semibold leading-snug tracking-normal text-inherit antialiased;
+}
+ 
+.lexical p {
+  @apply block font-sans text-base font-normal leading-relaxed text-inherit antialiased;
+}
+ 
+.lexical ul {
+  @apply list-inside list-disc;
+}
+ 
+.lexical ol {
+  @apply list-inside list-decimal;
+}
+ 
+.lexical li {
+  @apply font-sans text-base font-normal leading-relaxed text-inherit antialiased;
+
+}
+ 
+.lexical blockquote {
+  @apply block font-sans text-xl font-normal leading-relaxed text-inherit antialiased;
+}
+ 
+.lexical code {
+  @apply rounded-md bg-gray-900/[0.1] px-1 py-0.5 text-sm font-normal text-gray-900;
+}
